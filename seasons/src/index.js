@@ -29,7 +29,7 @@ class App extends React.Component {
    }
 
    render() {
-      this.renderCondition();
+      return <div className="border-red">{this.renderCondition()}</div>;
    }
 }
 
