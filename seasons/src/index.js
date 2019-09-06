@@ -16,7 +16,7 @@ class App extends React.Component {
       );
    }
 
-   render() {
+   renderCondition() {
       if (this.state.errMessage && !this.state.lat) {
          return <div>Error: {this.state.errMessage}</div>;
       }
@@ -26,6 +26,10 @@ class App extends React.Component {
       }
 
       return <Spinner />;
+   }
+
+   render() {
+      this.renderCondition();
    }
 }
 
