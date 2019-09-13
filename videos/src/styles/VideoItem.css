@@ -1,0 +1,22 @@
+.video-loading {
+   height: 500px;
+}
+.video-item {
+   display: flex !important;
+   align-items: center !important;
+   cursor: pointer;
+}
+.video-item.item img {
+   max-width: 168px;
+}
+/* .video-item .image-container img {
+   display: block;
+   max-width: 100%;
+   margin: auto;
+} */
+.video-item .content {
+   margin-left: 10px;
+}
+.video-item .content .header {
+   margin-bottom: 5px !important;
+}
