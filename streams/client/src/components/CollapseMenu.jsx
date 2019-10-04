@@ -1,17 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import GoogleAuth from "./GoogleAuth";
 
 const CollapseMenu = () => {
    return (
       <div className="collapse navbar-collapse" id="mobile">
          <ul className="navbar-nav ml-auto">
-            <li className="nav-item dropdown">
-               <li className="nav-item">
-                  <Link className="nav-link" to="/">
-                     All Streams
-                  </Link>
-               </li>
-               {/* <a
+            <li className="nav-item">
+               <Link className="nav-link" to="/">
+                  All Streams
+               </Link>
+            </li>
+            {/* <li className="nav-item dropdown">
+               <a
                   className="nav-link dropdown-toggle"
                   id="dropdown-menu"
                   role="button"
@@ -34,12 +35,15 @@ const CollapseMenu = () => {
                   <Link className="dropdown-item" to="/streams/show">
                      Show
                   </Link>
-               </div> */}
-            </li>
-            <li className="nav-item">
+               </div> 
+            </li> */}
+            {/* <li className="nav-item">
                <Link className="nav-link" to="/login">
-                  Login
+                  Login with Google
                </Link>
+            </li> */}
+            <li className="nav-item">
+               <GoogleAuth />
             </li>
          </ul>
       </div>
