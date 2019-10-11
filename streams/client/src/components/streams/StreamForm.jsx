@@ -24,25 +24,19 @@ class StreamForm extends React.Component {
 
    render() {
       return (
-         <div className="container">
-            <div className="row">
-               <div className="col-12 col-md-4">
-                  <form onSubmit={this.props.handleSubmit(this.onSubmit)}>
-                     <Field
-                        name="title"
-                        component={this.renderInput}
-                        label="Enter title"
-                     />
-                     <Field
-                        name="description"
-                        component={this.renderInput}
-                        label="Enter description"
-                     />
-                     <button className="btn btn-primary">Submit</button>
-                  </form>
-               </div>
-            </div>
-         </div>
+         <form onSubmit={this.props.handleSubmit(this.onSubmit)}>
+            <Field
+               name="title"
+               component={this.renderInput}
+               label="Enter title"
+            />
+            <Field
+               name="description"
+               component={this.renderInput}
+               label="Enter description"
+            />
+            <button className="btn btn-primary">Submit</button>
+         </form>
       );
    }
 }
