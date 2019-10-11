@@ -4,11 +4,22 @@ import $ from "jquery";
 
 const DisplayModal = () => {
    return (
-      <div className="modal fade" id="deleteModal" role="dialog">
+      <div
+         className="modal fade show"
+         id="deleteModal"
+         role="dialog"
+         aria-modal="true"
+         style={{
+            zIndex: "1072",
+            display: "block",
+            overflowX: "hidden",
+            overflowY: "auto"
+         }}
+      >
          <div className="modal-dialog" role="document">
             <div className="modal-content">
                <div className="modal-header">
-                  <h4 class="modal-title">Delete Stream</h4>
+                  <h4 className="modal-title">Delete Stream</h4>
                   <button type="button" className="close" data-dismiss="modal">
                      <span>&times;</span>
                   </button>
@@ -36,3 +47,5 @@ const Modal = props => {
       document.getElementById("modal")
    );
 };
+
+export default Modal;
