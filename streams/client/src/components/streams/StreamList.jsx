@@ -13,7 +13,10 @@ class StreamList extends React.Component {
          return (
             <>
                <span className="float-right">
-                  <Link to="/" className="btn btn-danger">
+                  <Link
+                     to={`/streams/delete/${stream.id}`}
+                     className="btn btn-danger"
+                  >
                      <i className="fas fa-trash-alt"></i>
                   </Link>
                </span>
