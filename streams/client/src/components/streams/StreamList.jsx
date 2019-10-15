@@ -40,9 +40,12 @@ class StreamList extends React.Component {
          return (
             <li key={stream.id} className="list-group-item clearfix">
                <div className=" float-left">
-                  <a href="#" className="d-block h5 mb-1">
+                  <Link
+                     to={`/streams/${stream.id}`}
+                     className="d-block h5 mb-1"
+                  >
                      {stream.title}
-                  </a>
+                  </Link>
                   <p className="mb-0 float-left">{stream.description}</p>
                </div>
                {this.checkAdminUser(stream)}
