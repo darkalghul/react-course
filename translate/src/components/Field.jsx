@@ -4,16 +4,20 @@ import LanguageContext from "../contexts/LanguageContext";
 class Field extends React.Component {
    // static contextType = LanguageContext;
 
+   renderName(language) {
+      return language === "english" ? "Your Name" : "Dein Name";
+   }
+
    render() {
-      // const name = this.context === "english" ? "Your Name" : "Dein Name";
+      // const name = this.context.language === "english" ? "Your Name" : "Dein Name";
       // const placeholder =
-      //    this.context === "english" ? "Type your Name" : "Gib deinen Namen ein";
+      //    this.context/language === "english" ? "Type your Name" : "Gib deinen Namen ein";
 
       return (
          <div className="form-group">
             <label htmlFor="input">
                <LanguageContext.Consumer>
-                  {value => (value === "english" ? "Your Name" : "Dein Name")}
+                  {({ language }) => this.renderName(language)}
                </LanguageContext.Consumer>
             </label>
             <input type="text" className="form-control" id="input" />
