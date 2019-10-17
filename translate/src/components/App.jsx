@@ -3,6 +3,7 @@ import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import "./app.css";
 import UserCreate from "./UserCreate";
 import LanguageContext from "../contexts/LanguageContext";
+import ColorContext from "../contexts/ColorContext";
 
 class App extends React.Component {
    state = {
@@ -55,7 +56,9 @@ class App extends React.Component {
                <div className="row">
                   <div className="col-12">
                      <LanguageContext.Provider value={this.state.language}>
-                        <UserCreate />
+                        <ColorContext.Provider value="btn-danger">
+                           <UserCreate />
+                        </ColorContext.Provider>
                      </LanguageContext.Provider>
                   </div>
                </div>
