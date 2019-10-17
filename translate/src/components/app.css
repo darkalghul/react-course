@@ -1,0 +1,7 @@
+.dropdown-menu .dropdown-item {
+   margin-bottom: 0;
+}
+
+.dropdown-menu .dropdown-item:hover {
+   cursor: pointer;
+}
